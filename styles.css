@@ -1,44 +1,30 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light Sky Blue */
+    color: #006400; /* Dark Green */
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
+/* Include the previous CSS styles */
+
+#multiple-images img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Customize styles for each section based on your design preferences */
+#shades-of-green {
+    background-color: #98fb98; /* Pale Green */
+}
+
+/* Add styles for other sections as needed */
+
+footer {
+    background-color: #228b22; /* Forest Green */
+    color: #fff; /* White */
     text-align: center;
-    padding: 20px;
-}
-
-section {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-input {
-    padding: 8px;
-    margin-bottom: 16px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
