@@ -1,8 +1,29 @@
-function registerForWorkshop() {
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('email').value;
+document.addEventListener('DOMContentLoaded', function () {
+    fetchShadesOfGreenContent();
+    fetchMultipleImagesContent();
+    fetchFAQContent();
+    fetchBlogContent();
+    fetchVideoBlogContent();
+    fetchBenefitsContent();
+    fetchCityBenefitsContent();
+});
 
-    // Additional validation can be added here
+function fetchShadesOfGreenContent() {
+    // Fetch and dynamically populate content for the Shades of Green section
+}
 
-    alert(`Thank you, ${fullName}! You are now registered for the Worm Composting Workshop. We will contact you via email at ${email}.`);
+function fetchMultipleImagesContent() {
+    // Fetch images from Unsplash API for the Multiple Images section
+    const apiKey = 'YOUR_UNSPLASH_API_KEY';
+    const apiUrl = `https://api.unsplash.com/photos/random?query=worm-composting&count=3&client_id=${apiKey}`;
+
+    $.get(apiUrl, function (images) {
+        const multipleImagesSection = document.getElementById('multiple-images');
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image.urls.regular;
+            imgElement.alt = image.alt_description;
+            multipleImagesSection.appendChild(imgElement);
+        });
+    });
 }
